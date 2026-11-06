@@ -67,7 +67,7 @@
     .menu-open .menu-btn span{opacity:0}.menu-open .menu-btn::before{transform:translateY(7px) rotate(45deg)}.menu-open .menu-btn::after{transform:translateY(-7px) rotate(-45deg)}
 
     /* Hero */
-    .hero{position:relative;min-height:840px;padding:150px 0 84px;color:#fff;background:var(--ink);isolation:isolate;overflow:hidden}
+    .hero{position:relative;min-height:100svh;padding:96px 0 40px;color:#fff;background:var(--ink);isolation:isolate;overflow:hidden}
     .hero::before{content:"";position:absolute;inset:0;z-index:-3;background:linear-gradient(118deg,#25143f 0%,#2E1A4D 52%,#4E2053 100%)}
     .grid-bg{position:absolute;inset:0;z-index:-2;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000 0%,transparent 85%)}
     .orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);animation:float 9s ease-in-out infinite alternate}
@@ -75,6 +75,7 @@
     .orb-b{width:320px;height:320px;left:-150px;bottom:40px;background:radial-gradient(circle,rgba(87,70,227,.7),transparent 68%);animation-delay:-4s}
     @keyframes float{to{transform:translate3d(24px,30px,0) scale(1.08)}}
     .hero-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+    .hero-content{height:563px;display:flex;flex-direction:column;justify-content:center}
     .hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid rgba(255,255,255,.2);border-radius:99px;background:rgba(255,255,255,.07);font:700 11px/1 "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase}
     .hero-kicker i{width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(232,100,25,.15);animation:pulse 2s infinite}
     @keyframes pulse{50%{box-shadow:0 0 0 9px rgba(232,100,25,0)}}
@@ -91,7 +92,7 @@
     .float-note{position:absolute;padding:15px 18px;border:1px solid rgba(255,255,255,.22);border-radius:15px;background:rgba(255,255,255,.11);box-shadow:0 12px 32px rgba(0,0,0,.18);backdrop-filter:blur(14px);font:700 12px/1.35 "Manrope",sans-serif}
     .float-note small{display:block;margin-bottom:5px;color:#f2a469;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
     .note-a{left:-35px;top:65px}.note-b{right:-20px;bottom:90px}
-    .hero-meta{position:relative;margin-top:74px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.06);backdrop-filter:blur(12px)}
+    .hero-meta{position:relative;margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.06);backdrop-filter:blur(12px)}
     .hero-meta div{padding:24px 28px;border-right:1px solid rgba(255,255,255,.12)}.hero-meta div:last-child{border:0}
     .hero-meta small{display:block;margin-bottom:6px;color:#bfb0cf;font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase}
     .hero-meta strong{font:700 15px/1.3 "Manrope",sans-serif;color:#fff}
@@ -117,6 +118,29 @@
     .area:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(46,26,77,.08);border-color:#d2c4e3}
     .area b{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:14px;background:#f1ebf7;color:var(--purple);font:700 12px/1 "Manrope",sans-serif}
     .area span{font:700 16px/1.3 "Manrope",sans-serif;color:var(--ink)}
+
+    /* Program */
+    .program-section{background:#f1edf5}
+    .program-section .section-head{justify-content:center;text-align:center}
+    .program-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:24px}
+    .program-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:220px;min-height:72px;padding:14px 22px;border:1px solid #c7b8d8;border-radius:17px;background:#fff;color:var(--ink);font:700 15px/1.4 "Manrope",sans-serif;box-shadow:0 5px 14px rgba(46,26,77,.07);transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+    .program-tab span:first-child{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+    .program-tab[aria-selected="true"]{border-color:var(--orange);background:var(--orange);color:var(--ink);box-shadow:0 8px 20px rgba(232,100,25,.25)}
+    .program-tab[aria-selected="true"] span:first-child{color:var(--ink)}
+    .program-tab:hover:not([aria-selected="true"]){transform:translateY(-2px);border-color:var(--purple);box-shadow:0 8px 20px rgba(46,26,77,.12)}
+    .program-actions{display:flex;justify-content:center;margin:-8px 0 26px}
+    .program-download{padding:12px 20px;border:1px solid var(--ink);border-radius:12px;background:var(--ink);color:#fff;font:700 14px/1.2 "Manrope",sans-serif;transition:transform .2s,background .2s}
+    .program-download:hover{transform:translateY(-2px);background:var(--purple)}
+    .program-day{border:1px solid #ded6e7;border-radius:20px;background:#fff;overflow:hidden}
+    .program-download-title{display:none}
+    .program-list{margin:0;padding:8px 28px 26px;list-style:none}
+    .program-item{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;padding:17px 0;border-bottom:1px solid #eeeaf2}
+    .program-item:last-child{border-bottom:0}
+    .program-time{padding-top:2px;color:var(--wine);font:800 14px/1.3 "Manrope",sans-serif;white-space:nowrap}
+    .program-detail strong{display:block;margin-bottom:6px;color:var(--ink);font:800 18px/1.35 "Manrope",sans-serif;letter-spacing:-.015em}
+    .program-detail p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+    .program-break{margin:15px 0 4px;padding:8px 12px;border-radius:9px;background:#f7f4f9;color:var(--purple);font:800 10px/1.3 "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    @media(max-width:680px){.program-tabs{gap:8px}.program-tab{flex:1 1 145px;min-width:0;padding:11px 12px}.program-list{padding:4px 20px 20px}.program-item{grid-template-columns:58px minmax(0,1fr);gap:12px}.program-time{font-size:12px}.program-detail strong{font-size:16px}}
 
     /* Modes */
     .modes-section{background:#f1edf5}
@@ -195,7 +219,7 @@
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none;align-self:center}
     @media(max-width:980px){
       .menu-btn{display:block}.nav-links{position:fixed;inset:78px 0 0;display:flex;flex-direction:column;align-items:stretch;gap:4px;padding:28px 20px;background:#fff;color:var(--ink);transform:translateX(100%);transition:.3s}.menu-open .nav-links{transform:none}.nav-links a{padding:16px}.nav-cta{text-align:center;background:var(--ink)!important;color:#fff!important;margin-top:8px}
-      .hero{padding-top:130px}.hero-layout{grid-template-columns:1fr;gap:40px}.hero-visual{min-height:400px}.logo-shell{width:330px}.note-a{left:6%}.note-b{right:5%}.hero-meta{grid-template-columns:repeat(2,1fr)}.hero-meta div:nth-child(2){border-right:0}.hero-meta div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
+      .hero{padding-top:130px}.hero-layout{grid-template-columns:1fr;gap:40px}.hero-content{height:auto}.hero-visual{min-height:400px}.logo-shell{width:330px}.note-a{left:6%}.note-b{right:5%}.hero-meta{grid-template-columns:repeat(2,1fr)}.hero-meta div:nth-child(2){border-right:0}.hero-meta div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
       .intro-grid,.faq-wrap{grid-template-columns:1fr;gap:50px}.edition{position:relative;top:auto}.downloads{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr);gap:45px 20px}.steps::before{display:none}.register-card,.location-card{grid-template-columns:1fr}.map-wrap{min-height:400px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
     }
     @media(max-width:680px){
@@ -218,7 +242,7 @@
       </a>
       <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
       <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li><li><a href="#convocatoria">Convocatoria</a></li><li><a href="#plantillas">Plantillas</a></li><li><a href="#proceso">Proceso</a></li><li><a class="nav-cta" href="#registro">Registrar trabajo</a></li>
+        <li><a href="#inicio">Inicio</a></li><li><a href="#programa">Programa</a></li><li><a href="#convocatoria">Convocatoria</a></li><li><a href="#plantillas">Plantillas</a></li><li><a href="#proceso">Proceso</a></li><li><a class="nav-cta" href="#registro">Registrar trabajo</a></li>
       </ul>
     </div>
   </nav>
@@ -228,7 +252,7 @@
       <div class="grid-bg" aria-hidden="true"></div><div class="orb orb-a" aria-hidden="true"></div><div class="orb orb-b" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-layout">
-          <div>
+          <div class="hero-content">
             <div class="hero-kicker"><i></i> Convocatoria abierta · 2026</div>
             <h1>Ideas que <span>transforman.</span></h1>
             <p class="hero-copy">XXXIV Foro de Investigación UVP. Un espacio para compartir conocimiento con conciencia, compromiso y ética.</p>
@@ -277,6 +301,80 @@
             <div class="area"><b>07</b><span>Ingenierías</span></div>
             <div class="area"><b>08</b><span>Ciencias de la vida</span></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section program-section" id="programa" aria-labelledby="program-title">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">XXXIV Foro de Investigación</p><h2 id="program-title">Programa del foro.</h2><p class="lead">Consulta las actividades, ponencias y talleres del 19 al 21 de noviembre.</p></div></div>
+        <div class="program-days reveal">
+          <div class="program-tabs" role="tablist" aria-label="Selecciona el día del programa">
+            <button class="program-tab" id="program-tab-1" type="button" role="tab" aria-selected="true" aria-controls="program-day-1"><span>Día 1</span><span>Jueves 19 de Noviembre</span></button>
+            <button class="program-tab" id="program-tab-2" type="button" role="tab" aria-selected="false" aria-controls="program-day-2" tabindex="-1"><span>Día 2</span><span>Viernes 20 de Noviembre</span></button>
+            <button class="program-tab" id="program-tab-3" type="button" role="tab" aria-selected="false" aria-controls="program-day-3" tabindex="-1"><span>Día 3</span><span>Sábado 21 de Noviembre</span></button>
+          </div>
+          <div class="program-actions"><button class="program-download" type="button">Descargar programa</button></div>
+          <section class="program-day" id="program-day-1" role="tabpanel" aria-labelledby="program-tab-1" tabindex="0">
+            <h3 class="program-download-title">Jueves 19 de noviembre de 2026</h3>
+            <ol class="program-list">
+              <li class="program-item"><time class="program-time">11:00</time><div class="program-detail"><strong>Inauguración</strong></div></li>
+              <li class="program-item"><time class="program-time">11:15</time><div class="program-detail"><strong>Conferencia magistral: «La IA no tiene conciencia. Los investigadores sí.»</strong><p>Dra. Pamela Jocelyn Palomo Martínez (UDEM, Universidad de Monterrey)<br>Moderador: Dr. Marcelino Trujillo Méndez</p></div></li>
+              <li class="program-item"><time class="program-time">12:00</time><div class="program-detail"><strong>Presentación de libros</strong><p>Moderador: Dr. Enrique Moreno Ceballos</p></div></li>
+              <li class="program-item"><time class="program-time">12:00</time><div class="program-detail"><strong>Presentación del libro «La cocina poblana: saberes y sabores»</strong><p>Coord. Dr. Mauricio Piñón Vargas (UVP, Gastronomía)</p></div></li>
+              <li class="program-item"><time class="program-time">12:40</time><div class="program-detail"><strong>Presentación del libro «Paisajes, imaginarios de lugares mexicanos en la literatura»</strong><p>Dr. Eloy Méndez Sáenz y Mtra. Alicia Zamora Torres (BUAP, Instituto de Ciencias Sociales y Humanidades Alfonso Vélez Pliego)</p></div></li>
+              <li class="program-item"><time class="program-time">13:20</time><div class="program-detail"><strong>Presentación del libro «XXXIII Foro de investigación: Innovación, salud y sostenibilidad en la era de la inteligencia artificial»</strong></div></li>
+              <li class="program-item"><time class="program-time">14:00</time><div class="program-detail"><strong>Comida</strong></div></li>
+              <li class="program-item"><time class="program-time">15:00</time><div class="program-detail"><strong>Avances de investigación</strong><p>Moderadora: Dra. Elizabeth Popocatl Piña</p></div></li>
+              <li class="program-item"><time class="program-time">15:10</time><div class="program-detail"><strong>Detección de grietas en concreto hidráulico mediante una red neuronal convolucional propia</strong><p>Mario Antonio Bustamante Pereyra (UVP, Mecatrónica)</p></div></li>
+              <li class="program-item"><time class="program-time">15:25</time><div class="program-detail"><strong>Propuesta de plan integral de diversificación del portafolio para una empresa del sector maderero. Caso de estudio: San Pedro, Valle del Cauca</strong><p>Karina Barrera Sánchez, Mariana Campo Barbosa y Mauricio López Orozco (UCEVA, Unidad Central del Valle del Cauca, Ingeniería Industrial)</p></div></li>
+              <li class="program-item"><time class="program-time">15:40</time><div class="program-detail"><strong>Estrategias jurídicas para fiscalizar al sector informal basado en la equidad tributaria en el municipio de Puebla</strong><p>Maytte González Magallanes y Rafael Andrés Islas (UVP, Derecho)</p></div></li>
+              <li class="program-item"><time class="program-time">16:00</time><div class="program-detail"><strong>Del paisaje industrial al paisaje urbano: La Constancia Mexicana como caso de estudio de la transformación de los territorios industriales en Puebla</strong><p>Katherine Domínguez García (UVP, Arquitectura)</p></div></li>
+              <li class="program-item"><time class="program-time">16:15</time><div class="program-detail"><strong>Memoria, comunidad y producción. Ingenio de Atencingo, un estudio sociocultural</strong><p>Marco Antonio Peralta Baena (UVP, Arquitectura)</p></div></li>
+              <li class="program-item"><time class="program-time">16:30</time><div class="program-detail"><strong>Xallli: Reinterpretación del parador turístico como arquitectura de identidad territorial en Coronango, Puebla</strong><p>Jorge Roberto López Ponce y Teresa Lizette Mendel Acosta (UVP, Arquitectura)</p></div></li>
+              <li class="program-item"><time class="program-time">16:45</time><div class="program-detail"><strong>Preguntas y respuestas</strong></div></li>
+            </ol>
+          </section>
+          <section class="program-day" id="program-day-2" role="tabpanel" aria-labelledby="program-tab-2" tabindex="0" hidden>
+            <h3 class="program-download-title">Viernes 20 de noviembre de 2026</h3>
+            <ol class="program-list">
+              <li class="program-item"><time class="program-time">10:00</time><div class="program-detail"><strong>Concurso de carteles</strong><p>Coordinación: Dr. David González Albarrán</p></div></li>
+              <li class="program-item"><time class="program-time">11:00</time><div class="program-detail"><strong>Evaluación de carteles</strong></div></li>
+              <li class="program-item"><time class="program-time">11:30</time><div class="program-detail"><strong>Premiación</strong></div></li>
+              <li class="program-item"><time class="program-time">12:00</time><div class="program-detail"><strong>Informes de investigación</strong><p>Moderador: Dr. Marcelino Trujillo Méndez</p></div></li>
+              <li class="program-item"><time class="program-time">12:15</time><div class="program-detail"><strong>Caracterización macroeconómica y demanda turística del sector gastronómico en Puebla: Entorno regional y marco metodológico</strong><p>Dr. Mauricio Piñón Vargas (UVP, Gastronomía C)</p></div></li>
+              <li class="program-item"><time class="program-time">12:30</time><div class="program-detail"><strong>Ciberseguridad en la enseñanza de la ciberseguridad: Un estudio de caso</strong><p>Carlos Leopoldo Carreón Díaz de León, Margarita Carmina García López y Adriana Beristain Gómez (BUAP, Ciencias de la Computación)</p></div></li>
+              <li class="program-item"><time class="program-time">12:45</time><div class="program-detail"><strong>Auditoría interna y externa: Análisis de las deficiencias del control interno y su efecto en la transparencia y rendición de cuentas de los municipios de Puebla y Tulcingo de Valle, durante el ejercicio fiscal 2025</strong><p>Jesús Rosendo Verdejo (UVP, Contaduría)</p></div></li>
+              <li class="program-item"><time class="program-time">13:00</time><div class="program-detail"><strong>Reforma al artículo 4° del Código Penal del Estado de Puebla: Viabilidad de reducir la edad de imputabilidad en delitos graves</strong><p>Jennifer Rodríguez Rojas y Fátima Bonifacio Segura (UVP, Derecho)</p></div></li>
+              <li class="program-item"><time class="program-time">13:00</time><div class="program-detail"><strong>Preguntas y respuestas</strong></div></li>
+              <li class="program-item"><time class="program-time">13:15</time><div class="program-detail"><strong>Legitimidad democrática y baja participación electoral en la Elección Judicial 2025 en México: Análisis de percepción ciudadana y confianza institucional</strong><p>Marcelo Moro Martínez (UVP, Ciencia Política)</p></div></li>
+              <li class="program-item"><time class="program-time">13:30</time><div class="program-detail"><strong>Las reformas educativas en México: Análisis de su diseño e implementación como política pública (2013–2026)</strong><p>Claudia Monterrosas Suárez (BUAP, Ciencias Políticas)</p></div></li>
+              <li class="program-item"><time class="program-time">13:45</time><div class="program-detail"><strong>Lenguaje del velo: El tarot como mapa poético y territorio simbólico en la obra de Olga Orozco, Alejandra Pizarnik, María Negroni y Marosa di Giorgio</strong><p>Marissa Alaffita (Comunicación y Medios Digitales)</p></div></li>
+              <li class="program-item"><time class="program-time">14:00</time><div class="program-detail"><strong>Comida</strong></div></li>
+              <li class="program-item"><time class="program-time">15:00</time><div class="program-detail"><strong>Avances de investigación</strong><p>Moderador: Mtro. Oman Fernando García Franco</p></div></li>
+              <li class="program-item"><time class="program-time">15:00</time><div class="program-detail"><strong>Prevalencia de traumatismos dentoalveolares asociados por falta de protector bucal en entrenamientos en atletas de alto rendimiento de Taekwondo de 15 a 21 años en Puebla</strong><p>Nadia Pilar Castro Peña (UVP, Cirujano Dentista)</p></div></li>
+              <li class="program-item"><time class="program-time">15:15</time><div class="program-detail"><strong>Comparación del retratamiento endodóntico y la cirugía periapical en pacientes con lesiones periapicales crónicas</strong><p>Oscar Carlos Navarro García (UVP, Cirujano Dentista)</p></div></li>
+              <li class="program-item"><time class="program-time">15:30</time><div class="program-detail"><strong>Lesiones con mayor prevalencia en cavidad oral en pacientes con VIH/SIDA</strong><p>Aarón Álvarez Ortiz (UVP, Cirujano Dentista)</p></div></li>
+              <li class="program-item"><time class="program-time">15:45</time><div class="program-detail"><strong>Evolución cefalométrica a mediano plazo en un paciente menor de 7 años posterior a un traumatismo durante la dentición temprana: Reporte de un caso clínico</strong><p>Esperanza Martínez Muñoz (UVP, Cirujano Dentista)</p></div></li>
+              <li class="program-item"><time class="program-time">16:00</time><div class="program-detail"><strong>Presentación de reportes de investigación</strong><p>Moderador: Dr. Mauricio Piñón Vargas</p></div></li>
+              <li class="program-item"><time class="program-time">16:10</time><div class="program-detail"><strong>Formulación de cosméticos a base de ingredientes naturales</strong><p>Misael Corona Ramírez (UVP, Químico Farmacobiólogo)</p></div></li>
+              <li class="program-item"><time class="program-time">16:30</time><div class="program-detail"><strong>De un programa de integridad académica a un modelo institucional de consolidación: Evolución de una estrategia universitaria de mejora continua (2019–2026)</strong><p>Marcelino Trujillo Méndez (UVP, Pedagogía)</p></div></li>
+              <li class="program-item"><time class="program-time">16:50</time><div class="program-detail"><strong>Potencial de la semilla de aguacate como aditivo antioxidante para guacamola</strong><p>David González Albarrán (UVP, Nutrición)</p></div></li>
+              <li class="program-item"><time class="program-time">17:10</time><div class="program-detail"><strong>Propuesta de diseño de carcasa antirrobo para espejos laterales de Volkswagen Jetta Starline 2020 mediante ingeniería inversa y manufactura aditiva</strong><p>Oman Fernando (Ingeniería Mecatrónica)</p></div></li>
+              <li class="program-item"><time class="program-time">17:30</time><div class="program-detail"><strong>Derecho a la ciudad: Análisis de percepción infantil y juvenil del entorno socioterritorial de la colonia El Cerrito, Puebla, México</strong><p>Elizabeth Popocatl Piña (Arquitectura)</p></div></li>
+              <li class="program-item"><time class="program-time">17:50</time><div class="program-detail"><strong>Preguntas y cierre</strong></div></li>
+            </ol>
+          </section>
+          <section class="program-day" id="program-day-3" role="tabpanel" aria-labelledby="program-tab-3" tabindex="0" hidden>
+            <h3 class="program-download-title">Sábado 21 de noviembre de 2026</h3>
+            <ol class="program-list">
+              <li class="program-item"><time class="program-time">7:50</time><div class="program-detail"><strong>Registro</strong></div></li>
+              <li class="program-item"><time class="program-time">8:00</time><div class="program-detail"><strong>Curso-taller: Laboratorio de escritura, autorías e integridad académica</strong><p>Mtra. Abi Merino Alcalá y Dr. Enrique Moreno Ceballos (UVP, CERA y Coordinación Editorial)</p></div></li>
+              <li class="program-item"><time class="program-time">9:00</time><div class="program-detail"><strong>Receso</strong></div></li>
+              <li class="program-item"><time class="program-time">9:30</time><div class="program-detail"><strong>Taller: Asegurando la integridad académica en el uso de la IA generativa</strong><p>Dr. Mauricio Piñón Vargas (UVP, Dirección de Investigación e Innovación)</p></div></li>
+              <li class="program-item"><time class="program-time">10:30</time><div class="program-detail"><strong>Clausura</strong></div></li>
+            </ol>
+          </section>
         </div>
       </div>
     </section>
@@ -410,13 +508,58 @@
     sections.forEach(section => sectionObserver.observe(section));
 
     const reveals = document.querySelectorAll('.reveal');
-    if(reducedMotion){ reveals.forEach(el => el.classList.add('visible')); }
+    if(reducedMotion || !('IntersectionObserver' in window)){ reveals.forEach(el => el.classList.add('visible')); }
     else {
       const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
         if(entry.isIntersecting){ entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
       }), {threshold:.12});
       reveals.forEach(el => revealObserver.observe(el));
     }
+
+    const programTabs = [...document.querySelectorAll('.program-tab')];
+    const programDays = [...document.querySelectorAll('.program-day')];
+    document.querySelector('.program-download').addEventListener('click', () => {
+      const program = document.querySelector('#programa').cloneNode(true);
+      program.querySelector('.program-tabs').remove();
+      program.querySelector('.program-actions').remove();
+      program.querySelectorAll('.program-day').forEach(day => {
+        day.hidden = false;
+        day.removeAttribute('role');
+        day.removeAttribute('aria-labelledby');
+        day.removeAttribute('tabindex');
+      });
+      program.querySelectorAll('.reveal').forEach(element => element.classList.remove('reveal', 'visible'));
+
+      const downloadStyles = `${document.querySelector('style').textContent}\n.program-download-title{display:block;margin:22px 28px 0;color:var(--ink);font:800 20px/1.2 "Manrope",sans-serif}.program-day[hidden]{display:block!important}`;
+      const documentHtml = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Programa | XXXIV Foro de Investigación UVP</title><style>${downloadStyles}</style></head><body>${program.outerHTML}</body></html>`;
+      const file = new Blob([documentHtml], {type:'text/html;charset=utf-8'});
+      const downloadLink = document.createElement('a');
+      downloadLink.href = URL.createObjectURL(file);
+      downloadLink.download = 'programa-XXXIV-foro-investigacion-2026.html';
+      document.body.append(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+      setTimeout(() => URL.revokeObjectURL(downloadLink.href), 1000);
+    });
+    function selectProgramDay(index){
+      programTabs.forEach((tab,i) => {
+        const selected = i === index;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        programDays[i].hidden = !selected;
+      });
+    }
+    programTabs.forEach((tab,index) => {
+      tab.addEventListener('click', () => selectProgramDay(index));
+      tab.addEventListener('keydown', event => {
+        let next = index;
+        if(event.key === 'ArrowRight') next = (index + 1) % programTabs.length;
+        if(event.key === 'ArrowLeft') next = (index - 1 + programTabs.length) % programTabs.length;
+        if(event.key === 'Home') next = 0;
+        if(event.key === 'End') next = programTabs.length - 1;
+        if(next !== index){ event.preventDefault(); selectProgramDay(next); programTabs[next].focus(); }
+      });
+    });
 
     const tabs = [...document.querySelectorAll('.mode-tab')];
     const panels = [...document.querySelectorAll('.mode-panel')];
